@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241FF4DE57E31D8CAD95E08C /* Pods_Sticktime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */; };
+		32BEC2B320C21DCC002ED448 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BEC2B220C21DCC002ED448 /* CollectionViewCell.swift */; };
 		32CF1BA820C215C9000480FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BA720C215C9000480FB /* AppDelegate.swift */; };
 		32CF1BAA20C215C9000480FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BA920C215C9000480FB /* ViewController.swift */; };
 		32CF1BAD20C215C9000480FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CF1BAB20C215C9000480FB /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		32CF1BB520C215CA000480FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CF1BB320C215CA000480FB /* LaunchScreen.storyboard */; };
 		32CF1BC020C215CA000480FB /* SticktimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BBF20C215CA000480FB /* SticktimeTests.swift */; };
 		32CF1BCB20C215CA000480FB /* SticktimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BCA20C215CA000480FB /* SticktimeUITests.swift */; };
+		43F9A4FA45676EC3462CF4CB /* Pods_SticktimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37F83B51935F7D64216F790 /* Pods_SticktimeTests.framework */; };
+		D05099B34A8EC634265EA062 /* Pods_SticktimeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DC4020C9029E4C980CD820 /* Pods_SticktimeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1ADD7515E312ADD4B8FCA39B /* Pods-SticktimeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeUITests/Pods-SticktimeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		32BEC2B220C21DCC002ED448 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		32CF1BA420C215C9000480FB /* Sticktime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sticktime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CF1BA720C215C9000480FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32CF1BA920C215C9000480FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,14 @@
 		32CF1BC620C215CA000480FB /* SticktimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SticktimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CF1BCA20C215CA000480FB /* SticktimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SticktimeUITests.swift; sourceTree = "<group>"; };
 		32CF1BCC20C215CA000480FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A29C6180A939405AE34675 /* Pods-SticktimeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeUITests/Pods-SticktimeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		61DC4020C9029E4C980CD820 /* Pods_SticktimeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SticktimeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D4BC8D90D204B5EA644AE7 /* Pods-Sticktime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sticktime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime.debug.xcconfig"; sourceTree = "<group>"; };
+		68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sticktime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852D39AC7C364365827689C1 /* Pods-SticktimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeTests/Pods-SticktimeTests.release.xcconfig"; sourceTree = "<group>"; };
+		ADB009EDEED00138BA4C86C0 /* Pods-SticktimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeTests/Pods-SticktimeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEA4871A26911F537585AC16 /* Pods-Sticktime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sticktime.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime.release.xcconfig"; sourceTree = "<group>"; };
+		E37F83B51935F7D64216F790 /* Pods_SticktimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SticktimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241FF4DE57E31D8CAD95E08C /* Pods_Sticktime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F9A4FA45676EC3462CF4CB /* Pods_SticktimeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05099B34A8EC634265EA062 /* Pods_SticktimeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2001CB2E727505675AF2A69B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */,
+				E37F83B51935F7D64216F790 /* Pods_SticktimeTests.framework */,
+				61DC4020C9029E4C980CD820 /* Pods_SticktimeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32CF1B9B20C215C9000480FB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +110,8 @@
 				32CF1BBE20C215CA000480FB /* SticktimeTests */,
 				32CF1BC920C215CA000480FB /* SticktimeUITests */,
 				32CF1BA520C215C9000480FB /* Products */,
+				C60849C3C6E7239E8E099EF7 /* Pods */,
+				2001CB2E727505675AF2A69B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +135,7 @@
 				32CF1BB320C215CA000480FB /* LaunchScreen.storyboard */,
 				32CF1BB620C215CA000480FB /* Info.plist */,
 				32CF1BAE20C215C9000480FB /* Sticktime.xcdatamodeld */,
+				32BEC2B220C21DCC002ED448 /* CollectionViewCell.swift */,
 			);
 			path = Sticktime;
 			sourceTree = "<group>";
@@ -128,6 +158,19 @@
 			path = SticktimeUITests;
 			sourceTree = "<group>";
 		};
+		C60849C3C6E7239E8E099EF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66D4BC8D90D204B5EA644AE7 /* Pods-Sticktime.debug.xcconfig */,
+				BEA4871A26911F537585AC16 /* Pods-Sticktime.release.xcconfig */,
+				ADB009EDEED00138BA4C86C0 /* Pods-SticktimeTests.debug.xcconfig */,
+				852D39AC7C364365827689C1 /* Pods-SticktimeTests.release.xcconfig */,
+				42A29C6180A939405AE34675 /* Pods-SticktimeUITests.debug.xcconfig */,
+				1ADD7515E312ADD4B8FCA39B /* Pods-SticktimeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32CF1BCF20C215CA000480FB /* Build configuration list for PBXNativeTarget "Sticktime" */;
 			buildPhases = (
+				5C1205ECE05878B8648DAE33 /* [CP] Check Pods Manifest.lock */,
 				32CF1BA020C215C9000480FB /* Sources */,
 				32CF1BA120C215C9000480FB /* Frameworks */,
 				32CF1BA220C215C9000480FB /* Resources */,
+				CDD797BB2BB5FBE7B3F7F8DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32CF1BD220C215CA000480FB /* Build configuration list for PBXNativeTarget "SticktimeTests" */;
 			buildPhases = (
+				A3974B666D51529F9A8D03F1 /* [CP] Check Pods Manifest.lock */,
 				32CF1BB720C215CA000480FB /* Sources */,
 				32CF1BB820C215CA000480FB /* Frameworks */,
 				32CF1BB920C215CA000480FB /* Resources */,
@@ -170,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32CF1BD520C215CA000480FB /* Build configuration list for PBXNativeTarget "SticktimeUITests" */;
 			buildPhases = (
+				806B80B362D3E7FA33146B5E /* [CP] Check Pods Manifest.lock */,
 				32CF1BC220C215CA000480FB /* Sources */,
 				32CF1BC320C215CA000480FB /* Frameworks */,
 				32CF1BC420C215CA000480FB /* Resources */,
@@ -254,6 +301,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C1205ECE05878B8648DAE33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sticktime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		806B80B362D3E7FA33146B5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SticktimeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3974B666D51529F9A8D03F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SticktimeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDD797BB2BB5FBE7B3F7F8DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DragDropiOS/DragDropiOS.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DragDropiOS.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32CF1BA020C215C9000480FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +383,7 @@
 			files = (
 				32CF1BB020C215C9000480FB /* Sticktime.xcdatamodeld in Sources */,
 				32CF1BAA20C215C9000480FB /* ViewController.swift in Sources */,
+				32BEC2B320C21DCC002ED448 /* CollectionViewCell.swift in Sources */,
 				32CF1BA820C215C9000480FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +555,7 @@
 		};
 		32CF1BD020C215CA000480FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66D4BC8D90D204B5EA644AE7 /* Pods-Sticktime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +573,7 @@
 		};
 		32CF1BD120C215CA000480FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEA4871A26911F537585AC16 /* Pods-Sticktime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +591,7 @@
 		};
 		32CF1BD320C215CA000480FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADB009EDEED00138BA4C86C0 /* Pods-SticktimeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +612,7 @@
 		};
 		32CF1BD420C215CA000480FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 852D39AC7C364365827689C1 /* Pods-SticktimeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +633,7 @@
 		};
 		32CF1BD620C215CA000480FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42A29C6180A939405AE34675 /* Pods-SticktimeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +653,7 @@
 		};
 		32CF1BD720C215CA000480FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ADD7515E312ADD4B8FCA39B /* Pods-SticktimeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

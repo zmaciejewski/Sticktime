@@ -1,0 +1,6 @@
+framework module Pods_SticktimeUITests {
+  umbrella header "Pods-SticktimeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

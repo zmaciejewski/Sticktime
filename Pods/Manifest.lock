@@ -1,0 +1,16 @@
+PODS:
+  - DragDropiOS (0.2.3)
+
+DEPENDENCIES:
+  - DragDropiOS
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DragDropiOS
+
+SPEC CHECKSUMS:
+  DragDropiOS: ea8f1ff41a8c6dab4a9ce1969dc11f12c1c02997
+
+PODFILE CHECKSUM: 63bc5fff05ec95a38178c02e47c67d9cf8d36373
+
+COCOAPODS: 1.5.3

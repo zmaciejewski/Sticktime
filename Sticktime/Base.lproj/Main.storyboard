@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gty-WK-nZX">
-                                <rect key="frame" x="0.0" y="167" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="334"/>
                                 <color key="backgroundColor" red="0.47151150600000002" green="0.99881725450000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xjs-ZU-UA0">
                                     <size key="itemSize" width="100" height="100"/>
@@ -54,18 +54,58 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-gW-5WL">
+                                <rect key="frame" x="0.0" y="333" width="375" height="334"/>
+                                <color key="backgroundColor" red="0.9524862855890347" green="1" blue="0.43945080933591185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BCX-ls-zeQ">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="XWX-s6-Ddk" customClass="CollectionViewCell" customModule="Sticktime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiH-dg-s1Q">
+                                                    <rect key="frame" x="29" y="39" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="hiH-dg-s1Q" firstAttribute="centerY" secondItem="XWX-s6-Ddk" secondAttribute="centerY" id="JFL-eE-9i5"/>
+                                            <constraint firstItem="hiH-dg-s1Q" firstAttribute="centerX" secondItem="XWX-s6-Ddk" secondAttribute="centerX" id="jaS-0q-3JV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="label" destination="hiH-dg-s1Q" id="0fP-8f-svT"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gty-WK-nZX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="KoW-eP-fuR"/>
-                            <constraint firstItem="gty-WK-nZX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XxA-99-InI"/>
-                            <constraint firstItem="gty-WK-nZX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YN4-cJ-WKt"/>
-                            <constraint firstItem="gty-WK-nZX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="rns-jB-jYv"/>
+                            <constraint firstItem="XWn-gW-5WL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="1o1-y2-Cdq"/>
+                            <constraint firstItem="gty-WK-nZX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Vn-DD-jOa"/>
+                            <constraint firstItem="XWn-gW-5WL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="MnN-rk-e36"/>
+                            <constraint firstItem="XWn-gW-5WL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="US3-8I-Jrx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="gty-WK-nZX" secondAttribute="top" constant="20" id="qXj-U9-b3l"/>
+                            <constraint firstItem="gty-WK-nZX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="rJK-Vy-Aql"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XWn-gW-5WL" secondAttribute="bottom" constant="0.5" id="vrd-J2-G0l"/>
+                            <constraint firstItem="gty-WK-nZX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="w9K-NC-LLj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="gty-WK-nZX" id="kkL-7F-LvO"/>
+                        <outlet property="collectionViewBottom" destination="XWn-gW-5WL" id="yKF-ph-rM0"/>
+                        <outlet property="collectionViewTop" destination="gty-WK-nZX" id="P4S-Ks-Sbn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

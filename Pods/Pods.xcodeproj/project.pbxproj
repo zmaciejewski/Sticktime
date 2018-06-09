@@ -9,20 +9,13 @@
 /* Begin PBXBuildFile section */
 		0CEF060D7B87CE77EE6613FD59DA1283 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		1567EC2263E405DEE19E4621B53CF39C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		15FB42C772D290DD9709904FD4FB4354 /* DragDropManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD221190CCDEBDE9935F12EDD13E9DA /* DragDropManager.swift */; };
-		2E34BF5C4E0A10FD758331AEC8DD5F1B /* DragDropiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CDAD286295DE0AF692CD96B6169191 /* DragDropiOS-dummy.m */; };
-		350FD127C16D0AC10F34BEF1B7F96440 /* DragDropiOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3EDD3AC80C1F1A2923DAD53E8D01AA /* DragDropiOS.swift */; };
-		35D2FA9389D49A34A1D3F2C223B25083 /* DragDropCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC514C30E27D11DF2660A773D266084E /* DragDropCollectionView.swift */; };
-		64C560B287EB30C0F42B1282B0305AD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		84DDDB053404246DE3D37B56171C9C55 /* DragDropTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DF65147824BF34B2543CDBBAF416EB /* DragDropTableView.swift */; };
-		9BB7B2A17C7A349785EDB50443345AF0 /* DragDropiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC545A4BCD842AAAB9A7FBBE734F3835 /* DragDropiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5929CA84CA13AFADEB01D6D406320072 /* Pods-Sticktime-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E1FC56FD839D3E0B1EF16B7F81792BB /* Pods-Sticktime-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B4E578C6F16D7636EEE38D60C9FA4EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		A7C90EAF3C24C6D75F949CF692220F97 /* Pods-SticktimeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D039C20BB91ED7AD6395429631C37593 /* Pods-SticktimeTests-dummy.m */; };
 		B5AF851D6DCBCAAE32D484FA9B307C53 /* Pods-SticktimeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9794BA0050AF4BFE0CC7E6C608BB62 /* Pods-SticktimeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB074AC61AA84B7B8B53B8A1F2F1607E /* Pods-Sticktime-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 463561D44B34CABEC9B06192515508F0 /* Pods-Sticktime-dummy.m */; };
+		B801B5A5D5DF15BA4411D1A1A5149285 /* Pods-Sticktime-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 463561D44B34CABEC9B06192515508F0 /* Pods-Sticktime-dummy.m */; };
 		CE4B7B1E95631AEE1D23C1C4EFF60F51 /* Pods-SticktimeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB0AFEE95F7297A02F13F36072BC92D /* Pods-SticktimeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E88C966FD9302DB1A8AF1919E1BAF092 /* Pods-SticktimeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED62ADFF99DD6B118B25D8ED14467D88 /* Pods-SticktimeUITests-dummy.m */; };
-		E9A4EA308100D138452A91E51F299724 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		EB75D70E8A6E6EB7678436AF400CDD5A /* Pods-Sticktime-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E1FC56FD839D3E0B1EF16B7F81792BB /* Pods-Sticktime-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,37 +23,29 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 375AC1599B39039AA72A84974643B017;
+			remoteGlobalIDString = 3986860517D9D11CCD7B102086F89A6B;
 			remoteInfo = "Pods-Sticktime";
-		};
-		3FD1A28714D2650E1EC098E04DB4FA65 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5EB39793FF8D4816782B45B12F94903A;
-			remoteInfo = DragDropiOS;
 		};
 		ECAF6991B322D6E011CEA01883F55CAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 375AC1599B39039AA72A84974643B017;
+			remoteGlobalIDString = 3986860517D9D11CCD7B102086F89A6B;
 			remoteInfo = "Pods-Sticktime";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		006F949A5184E36E009BEED2767527E7 /* Pods-SticktimeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SticktimeTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		09CDAD286295DE0AF692CD96B6169191 /* DragDropiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DragDropiOS-dummy.m"; sourceTree = "<group>"; };
+		073B835A3705A673CECD1EC6A32291DF /* Pods_SticktimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SticktimeTests.framework; path = "Pods-SticktimeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2AD17710741F8C68916B5A2EE8FE3D /* Pods-Sticktime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sticktime.release.xcconfig"; sourceTree = "<group>"; };
-		0C3EDD3AC80C1F1A2923DAD53E8D01AA /* DragDropiOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DragDropiOS.swift; path = DragDropiOS/Classes/DragDropiOS.swift; sourceTree = "<group>"; };
 		0F29EDF20BCD2323382061ABA65165DF /* Pods-SticktimeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SticktimeUITests.modulemap"; sourceTree = "<group>"; };
 		0FBC57C2ED2D91006C225E431211D0F6 /* Pods-SticktimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SticktimeTests.release.xcconfig"; sourceTree = "<group>"; };
-		1FB58268E062F20C6E299DB8071E5A8B /* Pods_SticktimeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SticktimeUITests.framework; path = "Pods-SticktimeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		112040F535D327E21797A01C78B650FD /* Pods_Sticktime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sticktime.framework; path = "Pods-Sticktime.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		259D83D70D402EF4774B52D156DC1CA9 /* Pods_SticktimeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SticktimeUITests.framework; path = "Pods-SticktimeUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C33F3FECEB08B4F1838F8B66832B6BA /* Pods-SticktimeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SticktimeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2CC6DFBF6D5F3741A0EB5050F65734A7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		350D181268B483201A45BEC9F67513D4 /* Pods-Sticktime-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sticktime-acknowledgements.plist"; sourceTree = "<group>"; };
-		3875C6E2E82B362075DDB5A5AA961805 /* Pods_Sticktime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Sticktime.framework; path = "Pods-Sticktime.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DB0AFEE95F7297A02F13F36072BC92D /* Pods-SticktimeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SticktimeTests-umbrella.h"; sourceTree = "<group>"; };
 		463561D44B34CABEC9B06192515508F0 /* Pods-Sticktime-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sticktime-dummy.m"; sourceTree = "<group>"; };
 		4CE4C7EAF309C0900B22547B691304BE /* Pods-Sticktime-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sticktime-frameworks.sh"; sourceTree = "<group>"; };
@@ -71,47 +56,29 @@
 		7D942EF993CC20C4031BB34BA3A77352 /* Pods-SticktimeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SticktimeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7DA718685BD8463E53F4DC10FF0BFDB6 /* Pods-SticktimeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SticktimeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		849D6D195AFE8C333C7ABF05DFE6B6E2 /* Pods-Sticktime-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sticktime-acknowledgements.markdown"; sourceTree = "<group>"; };
-		86FBCE69B774D7B2766DF5EC4CB409D2 /* DragDropiOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DragDropiOS.xcconfig; sourceTree = "<group>"; };
-		8F722A7385D1467FF698BB78CBB97EBF /* Pods_SticktimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SticktimeTests.framework; path = "Pods-SticktimeTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95C0588F287EF66DFDC47A47DA29F6EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AEDEB1936DF15FC039D0ABF06CE24E1 /* Pods-SticktimeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SticktimeTests-frameworks.sh"; sourceTree = "<group>"; };
 		9E9833E4F5D2BEC99CBEDEFCDE927F3E /* Pods-Sticktime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sticktime.debug.xcconfig"; sourceTree = "<group>"; };
 		9FE299257E859DFA28D2B62D27FBAA69 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FE54B6442A57A4E5A7CB3735E70CDC0 /* DragDropiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DragDropiOS.framework; path = DragDropiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB55D454F6A4B93AFDBE142B9DFFDD4 /* Pods-SticktimeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SticktimeTests.modulemap"; sourceTree = "<group>"; };
-		B9DF65147824BF34B2543CDBBAF416EB /* DragDropTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DragDropTableView.swift; path = DragDropiOS/Classes/DragDropTableView.swift; sourceTree = "<group>"; };
 		BBDA382652B1311B5F4B1EA299EDB5AE /* Pods-Sticktime-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sticktime-resources.sh"; sourceTree = "<group>"; };
-		BC514C30E27D11DF2660A773D266084E /* DragDropCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DragDropCollectionView.swift; path = DragDropiOS/Classes/DragDropCollectionView.swift; sourceTree = "<group>"; };
 		CCBCBD95460013B433EC57911C6766C0 /* Pods-Sticktime.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Sticktime.modulemap"; sourceTree = "<group>"; };
 		D039C20BB91ED7AD6395429631C37593 /* Pods-SticktimeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SticktimeTests-dummy.m"; sourceTree = "<group>"; };
 		DBE87D38D128E7B7090F03833E5F817D /* Pods-SticktimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SticktimeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DCCD3D89A9E7DBCCC375A9485FEB48C8 /* DragDropiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DragDropiOS.modulemap; sourceTree = "<group>"; };
 		DCEBC7F16C2E08D6B5C80F2A1A7E2607 /* Pods-SticktimeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SticktimeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E53E4D3B6D23BB9200CC479A2B3DD364 /* Pods-SticktimeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SticktimeTests-resources.sh"; sourceTree = "<group>"; };
 		E9E89B794D6E9720708E5EA0C990B08F /* Pods-SticktimeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SticktimeUITests-resources.sh"; sourceTree = "<group>"; };
-		EA5B1768A72191F254E3F46F35CD4B6F /* DragDropiOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DragDropiOS-prefix.pch"; sourceTree = "<group>"; };
 		ED62ADFF99DD6B118B25D8ED14467D88 /* Pods-SticktimeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SticktimeUITests-dummy.m"; sourceTree = "<group>"; };
 		F1C322D7136EA4670660FDBFF251BF5D /* Pods-SticktimeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SticktimeUITests-frameworks.sh"; sourceTree = "<group>"; };
 		F55CF24C5EFD10FBB4B6F01308A8556B /* Pods-SticktimeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SticktimeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FBD221190CCDEBDE9935F12EDD13E9DA /* DragDropManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DragDropManager.swift; path = DragDropiOS/Classes/DragDropManager.swift; sourceTree = "<group>"; };
-		FC545A4BCD842AAAB9A7FBBE734F3835 /* DragDropiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DragDropiOS-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D82DBC5033A85BD41AA00CF073C4765 /* Frameworks */ = {
+		B29AD0AA4CB9D7249CCEEDDC5EFA78E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A4EA308100D138452A91E51F299724 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A355C02E71ED2A0CDC5AFDB7AC038AD1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64C560B287EB30C0F42B1282B0305AD7 /* Foundation.framework in Frameworks */,
+				9B4E578C6F16D7636EEE38D60C9FA4EF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,41 +101,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07BB822882EACB34FD4555CD77E199BB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DCCD3D89A9E7DBCCC375A9485FEB48C8 /* DragDropiOS.modulemap */,
-				86FBCE69B774D7B2766DF5EC4CB409D2 /* DragDropiOS.xcconfig */,
-				09CDAD286295DE0AF692CD96B6169191 /* DragDropiOS-dummy.m */,
-				EA5B1768A72191F254E3F46F35CD4B6F /* DragDropiOS-prefix.pch */,
-				FC545A4BCD842AAAB9A7FBBE734F3835 /* DragDropiOS-umbrella.h */,
-				95C0588F287EF66DFDC47A47DA29F6EA /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/DragDropiOS";
-			sourceTree = "<group>";
-		};
-		0B789CA16861037BC2FC9A82B066F5A5 /* DragDropiOS */ = {
-			isa = PBXGroup;
-			children = (
-				BC514C30E27D11DF2660A773D266084E /* DragDropCollectionView.swift */,
-				0C3EDD3AC80C1F1A2923DAD53E8D01AA /* DragDropiOS.swift */,
-				FBD221190CCDEBDE9935F12EDD13E9DA /* DragDropManager.swift */,
-				B9DF65147824BF34B2543CDBBAF416EB /* DragDropTableView.swift */,
-				07BB822882EACB34FD4555CD77E199BB /* Support Files */,
-			);
-			name = DragDropiOS;
-			path = DragDropiOS;
-			sourceTree = "<group>";
-		};
-		297BF59790435D34771160ABA1B4B7C4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0B789CA16861037BC2FC9A82B066F5A5 /* DragDropiOS */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		5383A742154022686DC08036AFEB6161 /* Pods-SticktimeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +117,16 @@
 			);
 			name = "Pods-SticktimeTests";
 			path = "Target Support Files/Pods-SticktimeTests";
+			sourceTree = "<group>";
+		};
+		5A28BF8F6C80FDD87AC1E0020F23717F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				112040F535D327E21797A01C78B650FD /* Pods_Sticktime.framework */,
+				073B835A3705A673CECD1EC6A32291DF /* Pods_SticktimeTests.framework */,
+				259D83D70D402EF4774B52D156DC1CA9 /* Pods_SticktimeUITests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
@@ -218,8 +160,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				297BF59790435D34771160ABA1B4B7C4 /* Pods */,
-				D42D9D55679E71597DE0B80168A9089B /* Products */,
+				5A28BF8F6C80FDD87AC1E0020F23717F /* Products */,
 				81F97545D87C356625912B75972FD1BD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -260,20 +201,17 @@
 			path = "Target Support Files/Pods-SticktimeUITests";
 			sourceTree = "<group>";
 		};
-		D42D9D55679E71597DE0B80168A9089B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9FE54B6442A57A4E5A7CB3735E70CDC0 /* DragDropiOS.framework */,
-				3875C6E2E82B362075DDB5A5AA961805 /* Pods_Sticktime.framework */,
-				8F722A7385D1467FF698BB78CBB97EBF /* Pods_SticktimeTests.framework */,
-				1FB58268E062F20C6E299DB8071E5A8B /* Pods_SticktimeUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		118523CAB55AA9561CD413765BBD9998 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5929CA84CA13AFADEB01D6D406320072 /* Pods-Sticktime-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		172037F292CE061880CA07F161BBDA07 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,27 +220,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5818876C702BBAD55D76D9B36D8371DC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BB7B2A17C7A349785EDB50443345AF0 /* DragDropiOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A3C14D8A0A5E65267DF15F9FBE85178D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B5AF851D6DCBCAAE32D484FA9B307C53 /* Pods-SticktimeUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B392E1E3B046BCD7EC525805367B2F87 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB75D70E8A6E6EB7678436AF400CDD5A /* Pods-Sticktime-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,42 +246,24 @@
 			);
 			name = "Pods-SticktimeUITests";
 			productName = "Pods-SticktimeUITests";
-			productReference = 1FB58268E062F20C6E299DB8071E5A8B /* Pods_SticktimeUITests.framework */;
+			productReference = 259D83D70D402EF4774B52D156DC1CA9 /* Pods_SticktimeUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		375AC1599B39039AA72A84974643B017 /* Pods-Sticktime */ = {
+		3986860517D9D11CCD7B102086F89A6B /* Pods-Sticktime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9E1EC35423D3CE59949B267D2BBA912 /* Build configuration list for PBXNativeTarget "Pods-Sticktime" */;
+			buildConfigurationList = 599000870987058C4C8F25062F946F78 /* Build configuration list for PBXNativeTarget "Pods-Sticktime" */;
 			buildPhases = (
-				59DCE3EC214E2A9A0246864012005EBA /* Sources */,
-				1D82DBC5033A85BD41AA00CF073C4765 /* Frameworks */,
-				B392E1E3B046BCD7EC525805367B2F87 /* Headers */,
+				99F175077FDA5D3203F9FFAB4865B154 /* Sources */,
+				B29AD0AA4CB9D7249CCEEDDC5EFA78E8 /* Frameworks */,
+				118523CAB55AA9561CD413765BBD9998 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E99DCAF58D408904E0B401B863622D27 /* PBXTargetDependency */,
 			);
 			name = "Pods-Sticktime";
 			productName = "Pods-Sticktime";
-			productReference = 3875C6E2E82B362075DDB5A5AA961805 /* Pods_Sticktime.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5EB39793FF8D4816782B45B12F94903A /* DragDropiOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A4A02A5B2943F93B2657F30B1A88F021 /* Build configuration list for PBXNativeTarget "DragDropiOS" */;
-			buildPhases = (
-				D4C75FC665D0158A25D413085DD8B436 /* Sources */,
-				A355C02E71ED2A0CDC5AFDB7AC038AD1 /* Frameworks */,
-				5818876C702BBAD55D76D9B36D8371DC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DragDropiOS;
-			productName = DragDropiOS;
-			productReference = 9FE54B6442A57A4E5A7CB3735E70CDC0 /* DragDropiOS.framework */;
+			productReference = 112040F535D327E21797A01C78B650FD /* Pods_Sticktime.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C98F52780375964CCA69F67556B12CE2 /* Pods-SticktimeTests */ = {
@@ -377,7 +281,7 @@
 			);
 			name = "Pods-SticktimeTests";
 			productName = "Pods-SticktimeTests";
-			productReference = 8F722A7385D1467FF698BB78CBB97EBF /* Pods_SticktimeTests.framework */;
+			productReference = 073B835A3705A673CECD1EC6A32291DF /* Pods_SticktimeTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -397,12 +301,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D42D9D55679E71597DE0B80168A9089B /* Products */;
+			productRefGroup = 5A28BF8F6C80FDD87AC1E0020F23717F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5EB39793FF8D4816782B45B12F94903A /* DragDropiOS */,
-				375AC1599B39039AA72A84974643B017 /* Pods-Sticktime */,
+				3986860517D9D11CCD7B102086F89A6B /* Pods-Sticktime */,
 				C98F52780375964CCA69F67556B12CE2 /* Pods-SticktimeTests */,
 				0442B758558CE66912CE2D6B3D8A14C1 /* Pods-SticktimeUITests */,
 			);
@@ -410,19 +313,19 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		59DCE3EC214E2A9A0246864012005EBA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB074AC61AA84B7B8B53B8A1F2F1607E /* Pods-Sticktime-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		973117161CD52372856B3B70AFE1CA6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E88C966FD9302DB1A8AF1919E1BAF092 /* Pods-SticktimeUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99F175077FDA5D3203F9FFAB4865B154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B801B5A5D5DF15BA4411D1A1A5149285 /* Pods-Sticktime-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,38 +337,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4C75FC665D0158A25D413085DD8B436 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				35D2FA9389D49A34A1D3F2C223B25083 /* DragDropCollectionView.swift in Sources */,
-				2E34BF5C4E0A10FD758331AEC8DD5F1B /* DragDropiOS-dummy.m in Sources */,
-				350FD127C16D0AC10F34BEF1B7F96440 /* DragDropiOS.swift in Sources */,
-				15FB42C772D290DD9709904FD4FB4354 /* DragDropManager.swift in Sources */,
-				84DDDB053404246DE3D37B56171C9C55 /* DragDropTableView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		A8FF410D8AE796D837A724A05EDA91E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Sticktime";
-			target = 375AC1599B39039AA72A84974643B017 /* Pods-Sticktime */;
+			target = 3986860517D9D11CCD7B102086F89A6B /* Pods-Sticktime */;
 			targetProxy = ECAF6991B322D6E011CEA01883F55CAE /* PBXContainerItemProxy */;
 		};
 		ABC8D95A78B6564415A6A66D8783E563 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Sticktime";
-			target = 375AC1599B39039AA72A84974643B017 /* Pods-Sticktime */;
+			target = 3986860517D9D11CCD7B102086F89A6B /* Pods-Sticktime */;
 			targetProxy = 367D21B9B42F3F2C549C6391DDBC58E2 /* PBXContainerItemProxy */;
-		};
-		E99DCAF58D408904E0B401B863622D27 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DragDropiOS;
-			target = 5EB39793FF8D4816782B45B12F94903A /* DragDropiOS */;
-			targetProxy = 3FD1A28714D2650E1EC098E04DB4FA65 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -571,7 +456,7 @@
 			};
 			name = Debug;
 		};
-		903E303457F2E048262147FEA6850C4C /* Release */ = {
+		2F0A4D62CF1BBCC37576B20E053D1C5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B2AD17710741F8C68916B5A2EE8FE3D /* Pods-Sticktime.release.xcconfig */;
 			buildSettings = {
@@ -602,13 +487,49 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		58A78376D6BD91F83CE7BC8C23CB982F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E9833E4F5D2BEC99CBEDEFCDE927F3E /* Pods-Sticktime.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Sticktime/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sticktime/Pods-Sticktime.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		9212FA545AB1B7B42E841A164D6CAF72 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -722,118 +643,6 @@
 			};
 			name = Debug;
 		};
-		F4BCBC9F9143597DC6739FC128C681D2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86FBCE69B774D7B2766DF5EC4CB409D2 /* DragDropiOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DragDropiOS/DragDropiOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DragDropiOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/DragDropiOS/DragDropiOS.modulemap";
-				PRODUCT_MODULE_NAME = DragDropiOS;
-				PRODUCT_NAME = DragDropiOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F5D563506B3EEF27A75522AA0511BC31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86FBCE69B774D7B2766DF5EC4CB409D2 /* DragDropiOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DragDropiOS/DragDropiOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DragDropiOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/DragDropiOS/DragDropiOS.modulemap";
-				PRODUCT_MODULE_NAME = DragDropiOS;
-				PRODUCT_NAME = DragDropiOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FAA7ECDE5B38BE2D4BCA8D68B2732E71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E9833E4F5D2BEC99CBEDEFCDE927F3E /* Pods-Sticktime.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Sticktime/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Sticktime/Pods-Sticktime.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		FDB2FC4A1E5891381CD9D922145497F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -913,29 +722,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		599000870987058C4C8F25062F946F78 /* Build configuration list for PBXNativeTarget "Pods-Sticktime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58A78376D6BD91F83CE7BC8C23CB982F /* Debug */,
+				2F0A4D62CF1BBCC37576B20E053D1C5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8B174101F8ABE93D84F46ED6021626B1 /* Build configuration list for PBXNativeTarget "Pods-SticktimeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9212FA545AB1B7B42E841A164D6CAF72 /* Debug */,
 				948476F1312F985C7D3BB724D52BC2B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A4A02A5B2943F93B2657F30B1A88F021 /* Build configuration list for PBXNativeTarget "DragDropiOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4BCBC9F9143597DC6739FC128C681D2 /* Debug */,
-				F5D563506B3EEF27A75522AA0511BC31 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9E1EC35423D3CE59949B267D2BBA912 /* Build configuration list for PBXNativeTarget "Pods-Sticktime" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FAA7ECDE5B38BE2D4BCA8D68B2732E71 /* Debug */,
-				903E303457F2E048262147FEA6850C4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		241FF4DE57E31D8CAD95E08C /* Pods_Sticktime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */; };
+		32BCBF1320CC450400B07040 /* TeamEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */; };
+		32BCBF1520CC474B00B07040 /* CreatePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1420CC474B00B07040 /* CreatePlayerViewController.swift */; };
+		32BCBF1720CC4DEB00B07040 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1620CC4DEB00B07040 /* TableViewCell.swift */; };
 		32BEC2B320C21DCC002ED448 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BEC2B220C21DCC002ED448 /* CollectionViewCell.swift */; };
 		32CF1BA820C215C9000480FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BA720C215C9000480FB /* AppDelegate.swift */; };
 		32CF1BAA20C215C9000480FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BA920C215C9000480FB /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		1ADD7515E312ADD4B8FCA39B /* Pods-SticktimeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeUITests/Pods-SticktimeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEntryTableViewController.swift; sourceTree = "<group>"; };
+		32BCBF1420CC474B00B07040 /* CreatePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlayerViewController.swift; sourceTree = "<group>"; };
+		32BCBF1620CC4DEB00B07040 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		32BEC2B220C21DCC002ED448 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		32CF1BA420C215C9000480FB /* Sticktime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sticktime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CF1BA720C215C9000480FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +142,9 @@
 				32CF1BB620C215CA000480FB /* Info.plist */,
 				32CF1BAE20C215C9000480FB /* Sticktime.xcdatamodeld */,
 				32BEC2B220C21DCC002ED448 /* CollectionViewCell.swift */,
+				32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */,
+				32BCBF1420CC474B00B07040 /* CreatePlayerViewController.swift */,
+				32BCBF1620CC4DEB00B07040 /* TableViewCell.swift */,
 			);
 			path = Sticktime;
 			sourceTree = "<group>";
@@ -382,8 +391,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CF1BB020C215C9000480FB /* Sticktime.xcdatamodeld in Sources */,
+				32BCBF1320CC450400B07040 /* TeamEntryTableViewController.swift in Sources */,
 				32CF1BAA20C215C9000480FB /* ViewController.swift in Sources */,
 				32BEC2B320C21DCC002ED448 /* CollectionViewCell.swift in Sources */,
+				32BCBF1520CC474B00B07040 /* CreatePlayerViewController.swift in Sources */,
+				32BCBF1720CC4DEB00B07040 /* TableViewCell.swift in Sources */,
 				32CF1BA820C215C9000480FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

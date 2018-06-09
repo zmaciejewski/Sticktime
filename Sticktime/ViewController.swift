@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     let nameArrayTop = ["player1", "player2", "player3", "player4"]
     let nameArrayBottom = ["player4", "player5", "player6", "player 7","Caleb"]
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,7 +37,7 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collectionViewTop {
-            return nameArrayTop.count
+            return appDelegate.playerList.count
         } else {
             return nameArrayBottom.count
         }
@@ -45,7 +47,7 @@ extension ViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! CollectionViewCell
         
         if collectionView == self.collectionViewTop {
-            cell.displayContent(title: nameArrayTop[indexPath.row])
+            cell.displayContent(title: appDelegate.playerList[indexPath.row])
         } else {
             cell.displayContent(title: nameArrayBottom[indexPath.row])
         }
@@ -58,7 +60,7 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionViewTop {
-            print(nameArrayTop[indexPath.row])
+            print(appDelegate.playerList[indexPath.row])
         } else {
             print(nameArrayBottom[indexPath.row])
         }

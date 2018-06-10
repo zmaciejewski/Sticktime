@@ -6,7 +6,7 @@ target 'Sticktime' do
   use_frameworks!
 
   # Pods for Sticktime
-  # pod 'DragDropiOS'
+  pod 'DragDropiOS'
 
   target 'SticktimeTests' do
     inherit! :search_paths

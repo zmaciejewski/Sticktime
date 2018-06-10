@@ -191,6 +191,7 @@
 				32CF1BA020C215C9000480FB /* Sources */,
 				32CF1BA120C215C9000480FB /* Frameworks */,
 				32CF1BA220C215C9000480FB /* Resources */,
+				54497C1817100D6FB12F7844 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +311,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		54497C1817100D6FB12F7844 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DragDropiOS/DragDropiOS.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DragDropiOS.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5C1205ECE05878B8648DAE33 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

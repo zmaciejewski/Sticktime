@@ -14,11 +14,11 @@ class TeamEntryTableViewController: UITableViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var dbRef: DatabaseReference!
-    var sweets = [Sweet]()
+    var players = [Player]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dbRef = Database.database().reference().child("sweet-items")
+        dbRef = Database.database().reference().child("players")
         startObservingDatabase()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,29 +30,29 @@ class TeamEntryTableViewController: UITableViewController {
     
     func startObservingDatabase() {
         dbRef!.observe(.value, with: { (snapshot: DataSnapshot) in
-            var newSweets = [Sweet]()
-            for sweet in snapshot.children {
-                let sweetObject = Sweet(snapshot: sweet as! DataSnapshot)
-                newSweets.append(sweetObject)
+            var newPlayers = [Player]()
+            for player in snapshot.children {
+                let playerObject = Player(snapshot: player as! DataSnapshot)
+                newPlayers.append(playerObject)
             }
-            self.sweets = newSweets
+            self.players = newPlayers
             self.tableView.reloadData()
         })
     }
     
     @IBAction func addPlayer(_ sender: Any) {
-        let sweetAlert = UIAlertController(title: "New Sweet", message: "Enter Your Sweet", preferredStyle: .alert)
-        sweetAlert.addTextField(configurationHandler: { (textField: UITextField) in
-            textField.placeholder = "Your Sweet"
+        let addPlayerAlert = UIAlertController(title: "Add Player", message: "Enter player name", preferredStyle: .alert)
+        addPlayerAlert.addTextField(configurationHandler: { (textField: UITextField) in
+            textField.placeholder = "Player Name"
         })
-        sweetAlert.addAction(UIAlertAction(title: "Send", style: .default, handler: { (action: UIAlertAction) in
-            if let sweetContent = sweetAlert.textFields?.first?.text {
-                let sweet = Sweet(content: sweetContent, addedByUser: "TestUser")
-                let sweetRef = self.dbRef.child(sweetContent.lowercased())
-                sweetRef.setValue(sweet.toAnyObject())
+        addPlayerAlert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (action: UIAlertAction) in
+            if let playerContent = addPlayerAlert.textFields?.first?.text {
+                let player = Player(content: playerContent, addedByUser: "TestUser")
+                let playerRef = self.dbRef.child(playerContent.lowercased())
+                playerRef.setValue(player.toAnyObject())
             }
         }))
-        self.present(sweetAlert, animated: true, completion: nil)
+        self.present(addPlayerAlert, animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,7 +76,7 @@ class TeamEntryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
 //        return appDelegate.playerList.count
-        return sweets.count
+        return players.count
     }
 
     
@@ -84,9 +84,8 @@ class TeamEntryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! TableViewCell
 
         // Configure the cell...
-        let sweet = sweets[indexPath.row]
-        cell.displayContent(title: sweet.content)
-//        cell.displayContent(title: appDelegate.playerList[indexPath.row])
+        let player = players[indexPath.row]
+        cell.displayContent(title: player.content)
 
         return cell
     }
@@ -100,17 +99,16 @@ class TeamEntryTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            let player = players[indexPath.row]
+            player.itemRef?.removeValue()
+        }
     }
-    */
+ 
 
     /*
     // Override to support rearranging the table view.

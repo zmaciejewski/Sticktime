@@ -1,5 +1,5 @@
 //
-//  Sweet.swift
+//  Player.swift
 //  Sticktime
 //
 //  Created by Caleb Rudnicki on 6/10/18.
@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseDatabase
 
-struct Sweet {
+struct Player {
     
     let key: String!
     let content: String!
@@ -27,14 +27,14 @@ struct Sweet {
         key = snapshot.key
         itemRef = snapshot.ref
 
-        if let sweetContent = (snapshot.value! as! NSDictionary).value(forKey: "content") as? String {
-            content = sweetContent
+        if let playerContent = (snapshot.value! as! NSDictionary).value(forKey: "content") as? String {
+            content = playerContent
         } else {
             content = ""
         }
         
-        if let sweetUser = (snapshot.value! as! NSDictionary).value(forKey: "addedByUser") as? String {
-            addedByUser = sweetUser
+        if let playerUser = (snapshot.value! as! NSDictionary).value(forKey: "addedByUser") as? String {
+            addedByUser = playerUser
         } else {
             addedByUser = ""
         }

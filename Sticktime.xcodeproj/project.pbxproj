@@ -21,6 +21,9 @@
 		32CF1BC020C215CA000480FB /* SticktimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BBF20C215CA000480FB /* SticktimeTests.swift */; };
 		32CF1BCB20C215CA000480FB /* SticktimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BCA20C215CA000480FB /* SticktimeUITests.swift */; };
 		43F9A4FA45676EC3462CF4CB /* Pods_SticktimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37F83B51935F7D64216F790 /* Pods_SticktimeTests.framework */; };
+		828748AD20CDB45F00E55F56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 828748AC20CDB45F00E55F56 /* GoogleService-Info.plist */; };
+		828748AF20CDB86000E55F56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828748AE20CDB86000E55F56 /* User.swift */; };
+		828748B120CDBA7400E55F56 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828748B020CDBA7400E55F56 /* Player.swift */; };
 		D05099B34A8EC634265EA062 /* Pods_SticktimeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DC4020C9029E4C980CD820 /* Pods_SticktimeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,9 @@
 		61DC4020C9029E4C980CD820 /* Pods_SticktimeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SticktimeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D4BC8D90D204B5EA644AE7 /* Pods-Sticktime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sticktime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime.debug.xcconfig"; sourceTree = "<group>"; };
 		68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sticktime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		828748AC20CDB45F00E55F56 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		828748AE20CDB86000E55F56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		828748B020CDBA7400E55F56 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		852D39AC7C364365827689C1 /* Pods-SticktimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeTests/Pods-SticktimeTests.release.xcconfig"; sourceTree = "<group>"; };
 		ADB009EDEED00138BA4C86C0 /* Pods-SticktimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeTests/Pods-SticktimeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BEA4871A26911F537585AC16 /* Pods-Sticktime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sticktime.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,11 +146,13 @@
 				32CF1BB120C215CA000480FB /* Assets.xcassets */,
 				32CF1BB320C215CA000480FB /* LaunchScreen.storyboard */,
 				32CF1BB620C215CA000480FB /* Info.plist */,
+				828748AC20CDB45F00E55F56 /* GoogleService-Info.plist */,
 				32CF1BAE20C215C9000480FB /* Sticktime.xcdatamodeld */,
 				32BEC2B220C21DCC002ED448 /* CollectionViewCell.swift */,
 				32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */,
 				32BCBF1420CC474B00B07040 /* CreatePlayerViewController.swift */,
 				32BCBF1620CC4DEB00B07040 /* TableViewCell.swift */,
+				828748B220CDBCA400E55F56 /* Model */,
 			);
 			path = Sticktime;
 			sourceTree = "<group>";
@@ -165,6 +173,15 @@
 				32CF1BCC20C215CA000480FB /* Info.plist */,
 			);
 			path = SticktimeUITests;
+			sourceTree = "<group>";
+		};
+		828748B220CDBCA400E55F56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				828748B020CDBA7400E55F56 /* Player.swift */,
+				828748AE20CDB86000E55F56 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C60849C3C6E7239E8E099EF7 /* Pods */ = {
@@ -289,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CF1BB520C215CA000480FB /* LaunchScreen.storyboard in Resources */,
+				828748AD20CDB45F00E55F56 /* GoogleService-Info.plist in Resources */,
 				32CF1BB220C215CA000480FB /* Assets.xcassets in Resources */,
 				32CF1BAD20C215C9000480FB /* Main.storyboard in Resources */,
 			);
@@ -319,10 +337,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DragDropiOS/DragDropiOS.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DragDropiOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -394,7 +420,9 @@
 				32BCBF1320CC450400B07040 /* TeamEntryTableViewController.swift in Sources */,
 				32CF1BAA20C215C9000480FB /* ViewController.swift in Sources */,
 				32BEC2B320C21DCC002ED448 /* CollectionViewCell.swift in Sources */,
+				828748AF20CDB86000E55F56 /* User.swift in Sources */,
 				32BCBF1520CC474B00B07040 /* CreatePlayerViewController.swift in Sources */,
+				828748B120CDBA7400E55F56 /* Player.swift in Sources */,
 				32BCBF1720CC4DEB00B07040 /* TableViewCell.swift in Sources */,
 				32CF1BA820C215C9000480FB /* AppDelegate.swift in Sources */,
 			);
@@ -571,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FNL2LKL956;
 				INFOPLIST_FILE = Sticktime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -589,6 +618,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FNL2LKL956;
 				INFOPLIST_FILE = Sticktime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

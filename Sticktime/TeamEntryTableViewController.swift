@@ -7,20 +7,52 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class TeamEntryTableViewController: UITableViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var dbRef: DatabaseReference!
+    var players = [Player]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dbRef = Database.database().reference().child("players")
+        startObservingDatabase()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+    }
+    
+    func startObservingDatabase() {
+        dbRef!.observe(.value, with: { (snapshot: DataSnapshot) in
+            var newPlayers = [Player]()
+            for player in snapshot.children {
+                let playerObject = Player(snapshot: player as! DataSnapshot)
+                newPlayers.append(playerObject)
+            }
+            self.players = newPlayers
+            self.tableView.reloadData()
+        })
+    }
+    
+    @IBAction func addPlayer(_ sender: Any) {
+        let addPlayerAlert = UIAlertController(title: "Add Player", message: "Enter player name", preferredStyle: .alert)
+        addPlayerAlert.addTextField(configurationHandler: { (textField: UITextField) in
+            textField.placeholder = "Player Name"
+        })
+        addPlayerAlert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (action: UIAlertAction) in
+            if let playerContent = addPlayerAlert.textFields?.first?.text {
+                let player = Player(content: playerContent, addedByUser: "TestUser")
+                let playerRef = self.dbRef.child(playerContent.lowercased())
+                playerRef.setValue(player.toAnyObject())
+            }
+        }))
+        self.present(addPlayerAlert, animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +75,8 @@ class TeamEntryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return appDelegate.playerList.count
+//        return appDelegate.playerList.count
+        return players.count
     }
 
     
@@ -51,7 +84,8 @@ class TeamEntryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! TableViewCell
 
         // Configure the cell...
-        cell.displayContent(title: appDelegate.playerList[indexPath.row])
+        let player = players[indexPath.row]
+        cell.displayContent(title: player.content)
 
         return cell
     }
@@ -65,17 +99,16 @@ class TeamEntryTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            let player = players[indexPath.row]
+            player.itemRef?.removeValue()
+        }
     }
-    */
+ 
 
     /*
     // Override to support rearranging the table view.

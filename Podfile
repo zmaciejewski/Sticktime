@@ -7,6 +7,9 @@ target 'Sticktime' do
 
   # Pods for Sticktime
   pod 'DragDropiOS'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'SticktimeTests' do
     inherit! :search_paths

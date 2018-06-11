@@ -7,20 +7,52 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class TeamEntryTableViewController: UITableViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var dbRef: DatabaseReference!
+    var sweets = [Sweet]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dbRef = Database.database().reference().child("sweet-items")
+        startObservingDatabase()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+    }
+    
+    func startObservingDatabase() {
+        dbRef!.observe(.value, with: { (snapshot: DataSnapshot) in
+            var newSweets = [Sweet]()
+            for sweet in snapshot.children {
+                let sweetObject = Sweet(snapshot: sweet as! DataSnapshot)
+                newSweets.append(sweetObject)
+            }
+            self.sweets = newSweets
+            self.tableView.reloadData()
+        })
+    }
+    
+    @IBAction func addPlayer(_ sender: Any) {
+        let sweetAlert = UIAlertController(title: "New Sweet", message: "Enter Your Sweet", preferredStyle: .alert)
+        sweetAlert.addTextField(configurationHandler: { (textField: UITextField) in
+            textField.placeholder = "Your Sweet"
+        })
+        sweetAlert.addAction(UIAlertAction(title: "Send", style: .default, handler: { (action: UIAlertAction) in
+            if let sweetContent = sweetAlert.textFields?.first?.text {
+                let sweet = Sweet(content: sweetContent, addedByUser: "TestUser")
+                let sweetRef = self.dbRef.child(sweetContent.lowercased())
+                sweetRef.setValue(sweet.toAnyObject())
+            }
+        }))
+        self.present(sweetAlert, animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +75,8 @@ class TeamEntryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return appDelegate.playerList.count
+//        return appDelegate.playerList.count
+        return sweets.count
     }
 
     
@@ -51,7 +84,9 @@ class TeamEntryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! TableViewCell
 
         // Configure the cell...
-        cell.displayContent(title: appDelegate.playerList[indexPath.row])
+        let sweet = sweets[indexPath.row]
+        cell.displayContent(title: sweet.content)
+//        cell.displayContent(title: appDelegate.playerList[indexPath.row])
 
         return cell
     }

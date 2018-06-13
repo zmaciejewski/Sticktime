@@ -41,16 +41,21 @@ class TeamEntryTableViewController: UITableViewController {
     }
     
     @IBAction func addPlayer(_ sender: Any) {
-        let addPlayerAlert = UIAlertController(title: "Add Player", message: "Enter player name", preferredStyle: .alert)
-        addPlayerAlert.addTextField(configurationHandler: { (textField: UITextField) in
-            textField.placeholder = "Player Name"
+        let addPlayerAlert = UIAlertController(title: "Add Player", message: "Enter player info", preferredStyle: .alert)
+        addPlayerAlert.addTextField(configurationHandler: { (nameField: UITextField) in
+            nameField.placeholder = "Player Name"
+        })
+        addPlayerAlert.addTextField(configurationHandler: { (numberField: UITextField) in
+            numberField.placeholder = "Player Number"
         })
         addPlayerAlert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (action: UIAlertAction) in
-            if let playerContent = addPlayerAlert.textFields?.first?.text {
-                let player = Player(content: playerContent, addedByUser: "TestUser")
-                let playerRef = self.dbRef.child(playerContent.lowercased())
-                playerRef.setValue(player.toAnyObject())
-            }
+            let playerName = addPlayerAlert.textFields![0] as UITextField
+            let playerNumber = addPlayerAlert.textFields![1] as UITextField
+            print(playerName.text)
+            print(playerNumber.text)
+//            let player = Player(content: playerContent, addedByUser: "TestUser")
+//            let playerRef = self.dbRef.child(playerContent.lowercased())
+//            playerRef.setValue(player.toAnyObject())
         }))
         self.present(addPlayerAlert, animated: true, completion: nil)
     }

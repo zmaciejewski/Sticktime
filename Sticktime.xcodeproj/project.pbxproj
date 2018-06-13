@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		241FF4DE57E31D8CAD95E08C /* Pods_Sticktime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */; };
+		322391F620D1AD8000B9E977 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 322391F520D1AD8000B9E977 /* GoogleService-Info.plist */; };
 		32BCBF1320CC450400B07040 /* TeamEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */; };
 		32BCBF1520CC474B00B07040 /* CreatePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1420CC474B00B07040 /* CreatePlayerViewController.swift */; };
 		32BCBF1720CC4DEB00B07040 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1620CC4DEB00B07040 /* TableViewCell.swift */; };
@@ -21,7 +22,6 @@
 		32CF1BC020C215CA000480FB /* SticktimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BBF20C215CA000480FB /* SticktimeTests.swift */; };
 		32CF1BCB20C215CA000480FB /* SticktimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BCA20C215CA000480FB /* SticktimeUITests.swift */; };
 		43F9A4FA45676EC3462CF4CB /* Pods_SticktimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37F83B51935F7D64216F790 /* Pods_SticktimeTests.framework */; };
-		828748AD20CDB45F00E55F56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 828748AC20CDB45F00E55F56 /* GoogleService-Info.plist */; };
 		828748AF20CDB86000E55F56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828748AE20CDB86000E55F56 /* User.swift */; };
 		828748B120CDBA7400E55F56 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828748B020CDBA7400E55F56 /* Player.swift */; };
 		D05099B34A8EC634265EA062 /* Pods_SticktimeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DC4020C9029E4C980CD820 /* Pods_SticktimeUITests.framework */; };
@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		1ADD7515E312ADD4B8FCA39B /* Pods-SticktimeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeUITests/Pods-SticktimeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		322391F520D1AD8000B9E977 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEntryTableViewController.swift; sourceTree = "<group>"; };
 		32BCBF1420CC474B00B07040 /* CreatePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlayerViewController.swift; sourceTree = "<group>"; };
 		32BCBF1620CC4DEB00B07040 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		61DC4020C9029E4C980CD820 /* Pods_SticktimeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SticktimeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D4BC8D90D204B5EA644AE7 /* Pods-Sticktime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sticktime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime.debug.xcconfig"; sourceTree = "<group>"; };
 		68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sticktime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		828748AC20CDB45F00E55F56 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		828748AE20CDB86000E55F56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		828748B020CDBA7400E55F56 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		852D39AC7C364365827689C1 /* Pods-SticktimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeTests/Pods-SticktimeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +115,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		322391F720D1ADFF00B9E977 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32CF1BA920C215C9000480FB /* ViewController.swift */,
+				32BCBF1420CC474B00B07040 /* CreatePlayerViewController.swift */,
+				32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		322391F820D1AE6300B9E977 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32CF1BAB20C215C9000480FB /* Main.storyboard */,
+				32BCBF1620CC4DEB00B07040 /* TableViewCell.swift */,
+				32BEC2B220C21DCC002ED448 /* CollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		32CF1B9B20C215C9000480FB = {
 			isa = PBXGroup;
 			children = (
@@ -141,17 +161,13 @@
 			isa = PBXGroup;
 			children = (
 				32CF1BA720C215C9000480FB /* AppDelegate.swift */,
-				32CF1BA920C215C9000480FB /* ViewController.swift */,
-				32CF1BAB20C215C9000480FB /* Main.storyboard */,
+				322391F720D1ADFF00B9E977 /* Controller */,
+				322391F820D1AE6300B9E977 /* View */,
 				32CF1BB120C215CA000480FB /* Assets.xcassets */,
 				32CF1BB320C215CA000480FB /* LaunchScreen.storyboard */,
 				32CF1BB620C215CA000480FB /* Info.plist */,
-				828748AC20CDB45F00E55F56 /* GoogleService-Info.plist */,
+				322391F520D1AD8000B9E977 /* GoogleService-Info.plist */,
 				32CF1BAE20C215C9000480FB /* Sticktime.xcdatamodeld */,
-				32BEC2B220C21DCC002ED448 /* CollectionViewCell.swift */,
-				32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */,
-				32BCBF1420CC474B00B07040 /* CreatePlayerViewController.swift */,
-				32BCBF1620CC4DEB00B07040 /* TableViewCell.swift */,
 				828748B220CDBCA400E55F56 /* Model */,
 			);
 			path = Sticktime;
@@ -306,7 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CF1BB520C215CA000480FB /* LaunchScreen.storyboard in Resources */,
-				828748AD20CDB45F00E55F56 /* GoogleService-Info.plist in Resources */,
+				322391F620D1AD8000B9E977 /* GoogleService-Info.plist in Resources */,
 				32CF1BB220C215CA000480FB /* Assets.xcassets in Resources */,
 				32CF1BAD20C215C9000480FB /* Main.storyboard in Resources */,
 			);

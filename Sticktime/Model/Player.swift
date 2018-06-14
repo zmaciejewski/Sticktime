@@ -11,37 +11,47 @@ import FirebaseDatabase
 
 struct Player {
     
+    let name: String!
+    let number: Int!
+    let position: String!
+    
     let key: String!
-    let content: String!
-    let addedByUser: String!
     let itemRef: DatabaseReference?
     
-    init(content: String, addedByUser: String, key: String = "") {
-        self.key = key
-        self.content = content
-        self.addedByUser = addedByUser
+    init(name: String, number: Int, position: String) {
+        self.name = name
+        self.number = number
+        self.position = position
+        self.key = ""
         self.itemRef = nil
+        
     }
     
     init(snapshot: DataSnapshot) {
         key = snapshot.key
         itemRef = snapshot.ref
-
-        if let playerContent = (snapshot.value! as! NSDictionary).value(forKey: "content") as? String {
-            content = playerContent
+        
+        if let playerName = (snapshot.value! as! NSDictionary).value(forKey: "name") as? String {
+            name = playerName
         } else {
-            content = ""
+            name = ""
+        }
+    
+        if let playerNumber = (snapshot.value! as! NSDictionary).value(forKey: "number") as? Int {
+            number = playerNumber
+        } else {
+            number = 00
         }
         
-        if let playerUser = (snapshot.value! as! NSDictionary).value(forKey: "addedByUser") as? String {
-            addedByUser = playerUser
+        if let playerPosition = (snapshot.value! as! NSDictionary).value(forKey: "position") as? String {
+            position = playerPosition
         } else {
-            addedByUser = ""
+            position = ""
         }
     }
     
     func toAnyObject() -> AnyObject {
-        return ["content": content, "addedByUser": addedByUser] as AnyObject
+        return ["name": name, "number": number, "positon": position] as AnyObject
     }
 }
 

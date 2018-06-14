@@ -19,13 +19,7 @@ class TeamEntryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dbRef = Database.database().reference().child("players")
-        startObservingDatabase()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        startObservingDatabase() //CR: This allows the tableview to listen to changes in the database and automatically update
     }
     
     func startObservingDatabase() {
@@ -48,13 +42,20 @@ class TeamEntryTableViewController: UITableViewController {
         addPlayerAlert.addTextField(configurationHandler: { (numberField: UITextField) in
             numberField.placeholder = "Player Number"
         })
+        //CR: Add one more textfield to get a players position
         addPlayerAlert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (action: UIAlertAction) in
             let playerName = addPlayerAlert.textFields![0] as UITextField
             let playerNumber = addPlayerAlert.textFields![1] as UITextField
-            print(playerName.text)
-            print(playerNumber.text)
-//            let player = Player(content: playerContent, addedByUser: "TestUser")
-//            let playerRef = self.dbRef.child(playerContent.lowercased())
+            print(playerName.text!)
+            print(playerNumber.text!)
+            
+            //CR: Create a Player Object Here
+            
+            /*CR: Uncomment the code below once you are done
+                  These two lines assign a var named playerRef to be a dictionary
+                  containing all of the data that a player object holds
+             */
+//            let playerRef = self.dbRef.child((playerName.text?.lowercased())!)
 //            playerRef.setValue(player.toAnyObject())
         }))
         self.present(addPlayerAlert, animated: true, completion: nil)
@@ -63,24 +64,19 @@ class TeamEntryTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.reloadData()
-        print(appDelegate.playerList)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-//        return appDelegate.playerList.count
         return players.count
     }
 
@@ -90,20 +86,14 @@ class TeamEntryTableViewController: UITableViewController {
 
         // Configure the cell...
         let player = players[indexPath.row]
-        cell.displayContent(title: player.content)
+        /*CR: Once you successfully have a player object with a name, number, and positon,
+              create a string variable that is something like 'name - number - positon'
+              and pass that into displayContent below to populate the tableview's cell
+        */
+        cell.displayContent(title: player.name)
 
         return cell
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -113,31 +103,5 @@ class TeamEntryTableViewController: UITableViewController {
             player.itemRef?.removeValue()
         }
     }
- 
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

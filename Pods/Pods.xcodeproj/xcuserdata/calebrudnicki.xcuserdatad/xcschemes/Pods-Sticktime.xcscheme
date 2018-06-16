@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BB1EE51450E73F8CC3404F8F05E9CC9"
+               BlueprintIdentifier = "17A42A0EF85EFFCD0107D2C3B59B3AE3"
                BuildableName = "Pods_Sticktime.framework"
                BlueprintName = "Pods-Sticktime"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3BB1EE51450E73F8CC3404F8F05E9CC9"
+            BlueprintIdentifier = "17A42A0EF85EFFCD0107D2C3B59B3AE3"
             BuildableName = "Pods_Sticktime.framework"
             BlueprintName = "Pods-Sticktime"
             ReferencedContainer = "container:Pods.xcodeproj">

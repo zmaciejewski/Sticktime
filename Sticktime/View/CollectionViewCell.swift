@@ -9,9 +9,17 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var label: UILabel!
     
-    func displayContent(title:String) {
-        label.text = title
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = contentView.frame.width / 2
     }
+    
+    func displayContent(title: String, color: UIColor) {
+        label.text = title
+        backgroundColor = color
+    }
+    
 }

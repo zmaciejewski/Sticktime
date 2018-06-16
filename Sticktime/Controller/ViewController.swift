@@ -7,63 +7,93 @@
 //
 
 import UIKit
-import DragDropiOS
 
 class ViewController: UIViewController {
-    @IBOutlet weak var collectionViewTop: UICollectionView!
-    @IBOutlet weak var collectionViewBottom: UICollectionView!
-    let nameArrayTop = ["player1", "player2", "player3", "player4"]
-    let nameArrayBottom = ["player4", "player5", "player6", "player 7","Caleb"]
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    fileprivate let headerArray = ["Forwards", "Defense", "Goalie", "On the Bench"]
+    fileprivate let forwardArray = ["12", "3", "17"]
+    fileprivate let defenseArray = ["27", "9"]
+    fileprivate let goalieArray = ["30"]
+    fileprivate let benchArray = ["4", "5", "7", "8", "10", "11", "13", "15", "18", "21", "23", "25", "28"]
+    fileprivate let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    fileprivate var longPressGesture: UILongPressGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        collectionViewTop.delegate = self
-        collectionViewTop.dataSource = self
-        collectionViewBottom.delegate = self
-        collectionViewBottom.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
+        collectionView.addGestureRecognizer(longPressGesture)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
+        switch(gesture.state) {
+        case .began:
+            guard let selectedIndexPath = collectionView.indexPathForItem(at: gesture.location(in: collectionView)) else {
+                break
+            }
+            collectionView.beginInteractiveMovementForItem(at: selectedIndexPath)
+        case .changed:
+            collectionView.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+        case .ended:
+            collectionView.endInteractiveMovement()
+        default:
+            collectionView.cancelInteractiveMovement()
+        }
     }
     
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 4
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.collectionViewTop {
-            return appDelegate.playerList.count
-        } else {
-            return nameArrayBottom.count
+        switch section {
+        case 0:
+            return forwardArray.count
+        case 1:
+            return defenseArray.count
+        case 2:
+            return goalieArray.count
+        default:
+            return benchArray.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! CollectionViewCell
-        
-        if collectionView == self.collectionViewTop {
-            cell.displayContent(title: appDelegate.playerList[indexPath.row])
-        } else {
-            cell.displayContent(title: nameArrayBottom[indexPath.row])
+        switch indexPath.section {
+        case 0:
+            cell.displayContent(title: forwardArray[indexPath.row], color: UIColor.red)
+        case 1:
+            cell.displayContent(title: defenseArray[indexPath.row], color: UIColor.green)
+        case 2:
+            cell.displayContent(title: goalieArray[indexPath.row], color: UIColor.cyan)
+        default:
+            cell.displayContent(title: benchArray[indexPath.row], color: UIColor.blue)
         }
-        
         return cell
     }
     
-}
-
-extension ViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == self.collectionViewTop {
-            print(appDelegate.playerList[indexPath.row])
-        } else {
-            print(nameArrayBottom[indexPath.row])
-        }
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+        return true
     }
+    
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        print("Starting section: \(sourceIndexPath.section), Starting index: \(sourceIndexPath.item)")
+        print("Starting section: \(destinationIndexPath.section), Starting index: \(destinationIndexPath.item)")
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionHeader", for: indexPath) as! CollectionReusableView
+        sectionHeaderView.displayContent(label: headerArray[indexPath.section])
+        return sectionHeaderView
+    }
+    
 }
-

@@ -50,7 +50,7 @@ struct Player {
     }
     
     func toAnyObject() -> AnyObject {
-        return ["name": name, "number": number, "positon": position] as AnyObject
+        return ["name": name, "number": number, "position": position] as AnyObject
     }
 }
 

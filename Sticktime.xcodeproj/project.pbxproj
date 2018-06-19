@@ -19,6 +19,7 @@
 		32CF1BB520C215CA000480FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CF1BB320C215CA000480FB /* LaunchScreen.storyboard */; };
 		32CF1BC020C215CA000480FB /* SticktimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BBF20C215CA000480FB /* SticktimeTests.swift */; };
 		32CF1BCB20C215CA000480FB /* SticktimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF1BCA20C215CA000480FB /* SticktimeUITests.swift */; };
+		32FE337B20D5A13400C8D7E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32FE337A20D5A13400C8D7E7 /* GoogleService-Info.plist */; };
 		43F9A4FA45676EC3462CF4CB /* Pods_SticktimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37F83B51935F7D64216F790 /* Pods_SticktimeTests.framework */; };
 		823F578720D88D8A00862E09 /* SwappableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F578620D88D8A00862E09 /* SwappableCollectionView.swift */; };
 		8280370B20D20DBE005DAD1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8280370A20D20DBE005DAD1F /* GoogleService-Info.plist */; };
@@ -64,6 +65,7 @@
 		32CF1BC620C215CA000480FB /* SticktimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SticktimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CF1BCA20C215CA000480FB /* SticktimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SticktimeUITests.swift; sourceTree = "<group>"; };
 		32CF1BCC20C215CA000480FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32FE337A20D5A13400C8D7E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42A29C6180A939405AE34675 /* Pods-SticktimeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeUITests/Pods-SticktimeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		61DC4020C9029E4C980CD820 /* Pods_SticktimeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SticktimeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D4BC8D90D204B5EA644AE7 /* Pods-Sticktime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sticktime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,7 +172,7 @@
 				32CF1BB120C215CA000480FB /* Assets.xcassets */,
 				32CF1BB320C215CA000480FB /* LaunchScreen.storyboard */,
 				32CF1BB620C215CA000480FB /* Info.plist */,
-				8280370A20D20DBE005DAD1F /* GoogleService-Info.plist */,
+				32FE337A20D5A13400C8D7E7 /* GoogleService-Info.plist */,
 				32CF1BAE20C215C9000480FB /* Sticktime.xcdatamodeld */,
 			);
 			path = Sticktime;
@@ -325,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CF1BB520C215CA000480FB /* LaunchScreen.storyboard in Resources */,
-				8280370B20D20DBE005DAD1F /* GoogleService-Info.plist in Resources */,
+				32FE337B20D5A13400C8D7E7 /* GoogleService-Info.plist in Resources */,
 				32CF1BB220C215CA000480FB /* Assets.xcassets in Resources */,
 				32CF1BAD20C215C9000480FB /* Main.storyboard in Resources */,
 			);

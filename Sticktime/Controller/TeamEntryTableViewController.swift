@@ -42,21 +42,26 @@ class TeamEntryTableViewController: UITableViewController {
         addPlayerAlert.addTextField(configurationHandler: { (numberField: UITextField) in
             numberField.placeholder = "Player Number"
         })
+        addPlayerAlert.addTextField(configurationHandler: { (posField: UITextField) in
+            posField.placeholder = "Player Position"
+        })
         //CR: Add one more textfield to get a players position
         addPlayerAlert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (action: UIAlertAction) in
             let playerName = addPlayerAlert.textFields![0] as UITextField
             let playerNumber = addPlayerAlert.textFields![1] as UITextField
+            let playerPos = addPlayerAlert.textFields![2] as UITextField
             print(playerName.text!)
             print(playerNumber.text!)
-            
+            print(playerPos.text!)
             //CR: Create a Player Object Here
+            let newPlayer = Player(name: playerName.text!, number: Int(playerNumber.text!)!, position: playerPos.text!)
             
             /*CR: Uncomment the code below once you are done
                   These two lines assign a var named playerRef to be a dictionary
                   containing all of the data that a player object holds
              */
-//            let playerRef = self.dbRef.child((playerName.text?.lowercased())!)
-//            playerRef.setValue(player.toAnyObject())
+            let playerRef = self.dbRef.child((playerName.text?.lowercased())!)
+            playerRef.setValue(newPlayer.toAnyObject())
         }))
         self.present(addPlayerAlert, animated: true, completion: nil)
     }
@@ -89,8 +94,9 @@ class TeamEntryTableViewController: UITableViewController {
         /*CR: Once you successfully have a player object with a name, number, and positon,
               create a string variable that is something like 'name - number - positon'
               and pass that into displayContent below to populate the tableview's cell
-        */
-        cell.displayContent(title: player.name)
+    */
+        let displayPlayer = player.name + " #" + String(player.number) + " " + player.position
+        cell.displayContent(title: displayPlayer)
 
         return cell
     }

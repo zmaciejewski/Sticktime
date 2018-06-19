@@ -6,7 +6,6 @@ target 'Sticktime' do
   use_frameworks!
 
   # Pods for Sticktime
-  pod 'DragDropiOS'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'

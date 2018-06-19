@@ -15,7 +15,6 @@ struct SticktimeUser {
     
     init(userData: User) {
         uid = userData.uid
-        
         if let mail = userData.providerData.first?.email {
             email = mail
         } else {

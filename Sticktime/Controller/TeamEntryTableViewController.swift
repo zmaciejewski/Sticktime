@@ -87,7 +87,7 @@ class TeamEntryTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! TeamEntryTableViewCell
 
         // Configure the cell...
         let player = players[indexPath.row]

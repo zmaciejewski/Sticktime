@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class GameCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var label: UILabel!
     

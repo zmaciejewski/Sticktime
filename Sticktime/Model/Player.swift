@@ -24,7 +24,6 @@ struct Player {
         self.position = position
         self.key = ""
         self.itemRef = nil
-        
     }
     
     init(snapshot: DataSnapshot) {

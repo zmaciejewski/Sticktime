@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class TeamEntryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     

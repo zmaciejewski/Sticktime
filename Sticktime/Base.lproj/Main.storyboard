@@ -167,6 +167,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jRS-Vh-kDK"/>
                     </view>
+                    <connections>
+                        <outlet property="centerButton" destination="aWW-SG-PpQ" id="x20-vH-dvb"/>
+                        <outlet property="goalieButton" destination="S0a-r4-vVy" id="XsG-bF-8t1"/>
+                        <outlet property="ldButton" destination="MJf-yy-hh4" id="BJx-xI-yxi"/>
+                        <outlet property="lwButton" destination="xhs-99-H4o" id="TVn-iH-9W3"/>
+                        <outlet property="rdButton" destination="XoH-jS-hdp" id="Y6h-VM-eRq"/>
+                        <outlet property="rwButton" destination="MgC-bu-EQB" id="4Et-GS-xw8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU6-Zo-jJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

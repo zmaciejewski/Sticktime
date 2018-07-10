@@ -9,13 +9,19 @@
 import UIKit
 import CircleMenu
 
-class MainViewController: UIViewController, CircleMenuDelegate {
+class MainViewController: UIViewController, CircleMenuDelegate, UITableViewDataSource {
     @IBOutlet weak var centerButton: CircleMenu!
     @IBOutlet weak var lwButton: CircleMenu!
     @IBOutlet weak var rwButton: CircleMenu!
     @IBOutlet weak var ldButton: CircleMenu!
     @IBOutlet weak var rdButton: CircleMenu!
     @IBOutlet weak var goalieButton: CircleMenu!
+    
+    @IBOutlet weak var statTableView: UITableView!
+    @IBOutlet weak var playerTableView: UITableView!
+    
+    private var statData = ["Shot", "Hit", "Block", "Turnover", "Take Away"]
+    private var playerData = ["Magic", "Caleb", "Karl", "Jack", "Drew", "Kevin", "Alex"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +57,9 @@ class MainViewController: UIViewController, CircleMenuDelegate {
         goalieButton.duration = 0.5
         goalieButton.delegate = self
         goalieButton.distance = 75
+        
+        statTableView.dataSource = self
+        playerTableView.dataSource = self
     }
     
     @IBAction func leftWingButtonPressed(_ sender: Any) {
@@ -95,4 +104,33 @@ class MainViewController: UIViewController, CircleMenuDelegate {
         rdButton.alpha = 0
         goalieButton.alpha = 0
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == statTableView {
+            return statData.count
+        }
+        else {
+            return playerData.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell:UITableViewCell?
+        if tableView == self.statTableView {
+            cell = tableView.dequeueReusableCell(withIdentifier: "statCell")
+            let text = statData[indexPath.row]
+            cell?.textLabel?.text = text
+        }
+        if tableView == self.playerTableView {
+            cell = tableView.dequeueReusableCell(withIdentifier: "playerListCell")
+            let text = playerData[indexPath.row]
+            cell?.textLabel?.text = text
+        }
+        return cell!
+    }
+    
 }

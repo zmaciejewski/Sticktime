@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		241FF4DE57E31D8CAD95E08C /* Pods_Sticktime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */; };
+		32832D1720F4390A009C29E4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32832D1620F4390A009C29E4 /* MainViewController.swift */; };
 		32BCBF1320CC450400B07040 /* TeamEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */; };
 		32BCBF1720CC4DEB00B07040 /* TeamEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1620CC4DEB00B07040 /* TeamEntryTableViewCell.swift */; };
 		32BEC2B320C21DCC002ED448 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BEC2B220C21DCC002ED448 /* GameCollectionViewCell.swift */; };
@@ -22,7 +23,6 @@
 		32FE337B20D5A13400C8D7E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32FE337A20D5A13400C8D7E7 /* GoogleService-Info.plist */; };
 		43F9A4FA45676EC3462CF4CB /* Pods_SticktimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37F83B51935F7D64216F790 /* Pods_SticktimeTests.framework */; };
 		823F578720D88D8A00862E09 /* SwappableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F578620D88D8A00862E09 /* SwappableCollectionView.swift */; };
-		8280370B20D20DBE005DAD1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8280370A20D20DBE005DAD1F /* GoogleService-Info.plist */; };
 		828748AF20CDB86000E55F56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828748AE20CDB86000E55F56 /* User.swift */; };
 		828748B120CDBA7400E55F56 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828748B020CDBA7400E55F56 /* Player.swift */; };
 		828F7B8320D4A67D00B6FD75 /* GameCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828F7B8220D4A67D00B6FD75 /* GameCollectionReusableView.swift */; };
@@ -48,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		1ADD7515E312ADD4B8FCA39B /* Pods-SticktimeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeUITests/Pods-SticktimeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		32832D1620F4390A009C29E4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEntryTableViewController.swift; sourceTree = "<group>"; };
 		32BCBF1620CC4DEB00B07040 /* TeamEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEntryTableViewCell.swift; sourceTree = "<group>"; };
 		32BEC2B220C21DCC002ED448 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		66D4BC8D90D204B5EA644AE7 /* Pods-Sticktime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sticktime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime.debug.xcconfig"; sourceTree = "<group>"; };
 		68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sticktime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		823F578620D88D8A00862E09 /* SwappableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwappableCollectionView.swift; sourceTree = "<group>"; };
-		8280370A20D20DBE005DAD1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		828748AE20CDB86000E55F56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		828748B020CDBA7400E55F56 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		828F7B8220D4A67D00B6FD75 /* GameCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -124,6 +124,7 @@
 			children = (
 				32CF1BA920C215C9000480FB /* GameViewController.swift */,
 				32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */,
+				32832D1620F4390A009C29E4 /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -357,6 +358,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -364,6 +366,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -436,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				828F7B8320D4A67D00B6FD75 /* GameCollectionReusableView.swift in Sources */,
+				32832D1720F4390A009C29E4 /* MainViewController.swift in Sources */,
 				32CF1BB020C215C9000480FB /* Sticktime.xcdatamodeld in Sources */,
 				823F578720D88D8A00862E09 /* SwappableCollectionView.swift in Sources */,
 				32BCBF1320CC450400B07040 /* TeamEntryTableViewController.swift in Sources */,

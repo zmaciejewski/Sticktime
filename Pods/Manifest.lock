@@ -1,29 +1,30 @@
 PODS:
-  - Firebase/Auth (5.2.0):
+  - CircleMenu (3.1.0)
+  - Firebase/Auth (5.4.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (= 5.0.1)
-  - Firebase/Core (5.2.0):
+    - FirebaseAuth (= 5.0.2)
+  - Firebase/Core (5.4.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.0.1)
-  - Firebase/CoreOnly (5.2.0):
-    - FirebaseCore (= 5.0.3)
-  - Firebase/Database (5.2.0):
+  - Firebase/CoreOnly (5.4.0):
+    - FirebaseCore (= 5.0.5)
+  - Firebase/Database (5.4.0):
     - Firebase/CoreOnly
-    - FirebaseDatabase (= 5.0.1)
+    - FirebaseDatabase (= 5.0.2)
   - FirebaseAnalytics (5.0.1):
     - FirebaseCore (~> 5.0)
     - FirebaseInstanceID (~> 3.0)
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
-  - FirebaseAuth (5.0.1):
+  - FirebaseAuth (5.0.2):
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (5.0.3):
+  - FirebaseCore (5.0.5):
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
-  - FirebaseDatabase (5.0.1):
+  - FirebaseDatabase (5.0.2):
     - FirebaseCore (~> 5.0)
     - leveldb-library (~> 1.18)
-  - FirebaseInstanceID (3.1.0):
+  - FirebaseInstanceID (3.1.1):
     - FirebaseCore (~> 5.0)
   - GoogleToolboxForMac/Defines (2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
@@ -37,12 +38,14 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
+  - CircleMenu
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CircleMenu
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -55,17 +58,18 @@ SPEC REPOS:
     - nanopb
 
 SPEC CHECKSUMS:
-  Firebase: 25ed0412036d7d008568d1fb4d2e9d81ea8a0a2c
+  CircleMenu: 68e85ad9ea8e22aa5cb00b204abb176c5edec587
+  Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
-  FirebaseAuth: 463b8ce33bd5d05f706dcd4615499e3212b4132b
-  FirebaseCore: a3c87242451633fff8490183898075ce77d168d2
-  FirebaseDatabase: 482bad9c2abd422bb2321194fb8c937e67426a89
-  FirebaseInstanceID: 05d779cbb97bd5bd5c51a38a903fc9cfe1b2454a
+  FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
+  FirebaseCore: 42b3267233bd21a5abd54117ccc38ca3dd0f8e83
+  FirebaseDatabase: 27be5ac5bc75e0b17537b2bbfada8258addcc8cd
+  FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 57f4d7b947a36a423e50a954d0ed14d80f8376be
+PODFILE CHECKSUM: bb33318f666ae536cec5c8615885ffd8bc737115
 
 COCOAPODS: 1.5.3

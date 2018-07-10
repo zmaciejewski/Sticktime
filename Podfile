@@ -9,6 +9,8 @@ target 'Sticktime' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  
+  pod 'CircleMenu'
 
   target 'SticktimeTests' do
     inherit! :search_paths

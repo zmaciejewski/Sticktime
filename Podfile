@@ -12,6 +12,13 @@ target 'Sticktime' do
   
   pod 'CircleMenu'
 
+  #pod 'pop', :git => 'https://github.com/facebook/pop.git'
+  #pod 'Tweaks'
+  #pod 'POP+MCAnimate'
+  #pod 'UIColor-CrossFade'
+  #pod 'PureLayout'
+
+
   target 'SticktimeTests' do
     inherit! :search_paths
     # Pods for testing

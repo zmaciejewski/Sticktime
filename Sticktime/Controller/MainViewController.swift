@@ -20,6 +20,14 @@ class MainViewController: UIViewController, CircleMenuDelegate, UITableViewDataS
     @IBOutlet weak var statTableView: UITableView!
     @IBOutlet weak var playerTableView: UITableView!
     
+    @IBOutlet weak var timeButton: UIButton!
+    var time = 1200
+    var timer = Timer()
+    var isTiming = false
+    
+    var home = 0
+    var away = 0
+    
     private var statData = ["Shot", "Hit", "Block", "Turnover", "Take Away"]
     private var playerData = ["Magic", "Caleb", "Karl", "Jack", "Drew", "Kevin", "Alex"]
     
@@ -60,6 +68,32 @@ class MainViewController: UIViewController, CircleMenuDelegate, UITableViewDataS
         
         statTableView.dataSource = self
         playerTableView.dataSource = self
+    }
+    
+    @IBAction func Countdown(_ sender: Any) {
+        if !isTiming {
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MainViewController.counter), userInfo: nil, repeats: true)
+            isTiming = true
+        } else {
+            isTiming = false
+            timer.invalidate()
+        }
+    }
+    
+    @objc func counter(){
+        time -= 1
+        let reportTime =  String(time/60) + ":" + String(time%60)
+        timeButton.setTitle(String(reportTime), for: .normal)
+    }
+    
+    @IBAction func homeScore(_ sender: UIButton) {
+        home += 1
+        sender.setTitle(String(home), for: .normal)
+    }
+    
+    @IBAction func awayScore(_ sender: UIButton) {
+        away += 1
+        sender.setTitle(String(away), for: .normal)
     }
     
     @IBAction func leftWingButtonPressed(_ sender: Any) {

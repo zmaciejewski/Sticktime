@@ -28,9 +28,9 @@ class MainViewController: UIViewController, CircleMenuDelegate, DragMenuViewDele
     @IBOutlet weak var ldDragPicker: DragMenuPicker!
     @IBOutlet weak var rdDragPicker: DragMenuPicker!
     
-    var tableCurrName = 0
-    var tableCurrStat = 0
-    var statTrue = true
+    //var tableCurrName = 0
+    //var tableCurrStat = 0
+    //var statTrue = true
     
     @IBOutlet weak var timeButton: UIButton!
     var time = 1200
@@ -44,15 +44,30 @@ class MainViewController: UIViewController, CircleMenuDelegate, DragMenuViewDele
             savePercentage.text = "Save%: " + String(y)
         }
     }
+    
+    var shotForCounter = 0 {
+        didSet {
+            shotsFor.text = "Shots: " + String(shotForCounter)
+            let y = Double(round(1000*Double(shotForCounter-home)/Double(shotForCounter))/1000)
+            savePercentageAgainst.text = "Save%: " + String(y)
+        }
+    }
+    
     @IBOutlet weak var shotsAgainst: UILabel!
     @IBOutlet weak var savePercentage: UILabel!
     @IBOutlet weak var shotsFor: UILabel!
     @IBOutlet weak var savePercentageAgainst: UILabel!
     
-    var home = 0
+    var home = 0 {
+        didSet {
+            let y = Double(round(1000*Double(shotForCounter-home)/Double(shotForCounter))/1000)
+            savePercentageAgainst.text = "Save%: " + String(y)
+        }
+    }
     var away = 0 {
         didSet {
-            savePercentage.text = "Save%: " + String(Double(shotCounter-away)/Double(shotCounter))
+            let y = Double(round(1000*Double(shotCounter-away)/Double(shotCounter))/1000)
+            savePercentage.text = "Save%: " + String(y)
         }
     }
     
@@ -70,7 +85,9 @@ class MainViewController: UIViewController, CircleMenuDelegate, DragMenuViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        
         //horizontalDragPicker?.title = "Center"
+        
         horizontalDragPicker?.items = ["Risley", "Polak", "Gauvin", "Rankin"]
         horizontalDragPicker?.direction = .vertical
         horizontalDragPicker?.margins = 20
@@ -275,17 +292,15 @@ class MainViewController: UIViewController, CircleMenuDelegate, DragMenuViewDele
             cell = tableView.dequeueReusableCell(withIdentifier: "statCell")
             let text = statData[indexPath.row]
             cell?.textLabel?.text = text
-            tableCurrStat = indexPath.row
         }
         if tableView == self.playerTableView {
             cell = tableView.dequeueReusableCell(withIdentifier: "playerListCell")
             let text = playerData[indexPath.row]
             cell?.textLabel?.text = text
-            tableCurrName = indexPath.row
         }
         return cell!
     }
-    
+
     /*
     func dragMenuViewWillDisplayMenu(_ dragMenuView: DragMenuView) {
         scrollView?.panGestureRecognizer.isEnabled = false
@@ -295,8 +310,13 @@ class MainViewController: UIViewController, CircleMenuDelegate, DragMenuViewDele
         scrollView?.panGestureRecognizer.isEnabled = true
     }*/
     
+    func dragMenuViewDidDismissMenu(_ dragMenuView: DragMenuView) {
+        shotForCounter += 1
+    }
+    
     func dragMenuView(_ dragMenuView: DragMenuView, didSelect item: String, at index: Int) {
         print("(from delegate) \(item) selected at index \(index)")
+        shotForCounter -= 1
     }
     
 }

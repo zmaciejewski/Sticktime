@@ -10,9 +10,14 @@ import UIKit
 
 class GoalieViewController: UIViewController {
 
+    static var labels = [UILabel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        for label in GoalieViewController.labels {
+            self.view.addSubview(label)
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -30,6 +35,7 @@ class GoalieViewController: UIViewController {
             label.textAlignment = .center
             label.text = "X"
             self.view.addSubview(label)
+            GoalieViewController.labels.append(label)
             //self.performSegue(withIdentifier: "segue", sender: nil)
             navigationController?.popViewController(animated: false)
         }

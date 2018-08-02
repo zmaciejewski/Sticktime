@@ -1,0 +1,6 @@
+framework module DragMenuPicker {
+  umbrella header "DragMenuPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

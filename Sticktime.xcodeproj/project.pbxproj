@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		241FF4DE57E31D8CAD95E08C /* Pods_Sticktime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68E33B69B6E1EE4C61FC2422 /* Pods_Sticktime.framework */; };
+		3266610C21133DB7006D0383 /* Half_ice_hockey_rink.png in Resources */ = {isa = PBXBuildFile; fileRef = 3266610B21133DB7006D0383 /* Half_ice_hockey_rink.png */; };
+		3266610E2113401B006D0383 /* GoalieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3266610D2113401B006D0383 /* GoalieViewController.swift */; };
 		32832D1720F4390A009C29E4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32832D1620F4390A009C29E4 /* MainViewController.swift */; };
 		32BCBF1320CC450400B07040 /* TeamEntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */; };
 		32BCBF1720CC4DEB00B07040 /* TeamEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BCBF1620CC4DEB00B07040 /* TeamEntryTableViewCell.swift */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		1ADD7515E312ADD4B8FCA39B /* Pods-SticktimeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SticktimeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SticktimeUITests/Pods-SticktimeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3266610B21133DB7006D0383 /* Half_ice_hockey_rink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Half_ice_hockey_rink.png; path = ../../Half_ice_hockey_rink.png; sourceTree = "<group>"; };
+		3266610D2113401B006D0383 /* GoalieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalieViewController.swift; sourceTree = "<group>"; };
 		32832D1620F4390A009C29E4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEntryTableViewController.swift; sourceTree = "<group>"; };
 		32BCBF1620CC4DEB00B07040 /* TeamEntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEntryTableViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		322391F720D1ADFF00B9E977 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3266610D2113401B006D0383 /* GoalieViewController.swift */,
 				32CF1BA920C215C9000480FB /* GameViewController.swift */,
 				32BCBF1220CC450400B07040 /* TeamEntryTableViewController.swift */,
 				32832D1620F4390A009C29E4 /* MainViewController.swift */,
@@ -167,6 +172,7 @@
 			children = (
 				32CF1BA720C215C9000480FB /* AppDelegate.swift */,
 				32CF1BAB20C215C9000480FB /* Main.storyboard */,
+				3266610B21133DB7006D0383 /* Half_ice_hockey_rink.png */,
 				828748B220CDBCA400E55F56 /* Model */,
 				322391F820D1AE6300B9E977 /* View */,
 				322391F720D1ADFF00B9E977 /* Controller */,
@@ -327,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3266610C21133DB7006D0383 /* Half_ice_hockey_rink.png in Resources */,
 				32CF1BB520C215CA000480FB /* LaunchScreen.storyboard in Resources */,
 				32FE337B20D5A13400C8D7E7 /* GoogleService-Info.plist in Resources */,
 				32CF1BB220C215CA000480FB /* Assets.xcassets in Resources */,
@@ -359,6 +366,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sticktime/Pods-Sticktime-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/DragMenuPicker/DragMenuPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -367,6 +375,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DragMenuPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -443,6 +452,7 @@
 				32CF1BB020C215C9000480FB /* Sticktime.xcdatamodeld in Sources */,
 				823F578720D88D8A00862E09 /* SwappableCollectionView.swift in Sources */,
 				32BCBF1320CC450400B07040 /* TeamEntryTableViewController.swift in Sources */,
+				3266610E2113401B006D0383 /* GoalieViewController.swift in Sources */,
 				32CF1BAA20C215C9000480FB /* GameViewController.swift in Sources */,
 				32BEC2B320C21DCC002ED448 /* GameCollectionViewCell.swift in Sources */,
 				828748AF20CDB86000E55F56 /* User.swift in Sources */,

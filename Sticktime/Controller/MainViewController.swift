@@ -8,8 +8,9 @@
 
 import UIKit
 import CircleMenu
+import DragMenuPicker
 
-class MainViewController: UIViewController, CircleMenuDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, CircleMenuDelegate, DragMenuViewDelegate, UITableViewDataSource {
     @IBOutlet weak var centerButton: CircleMenu!
     @IBOutlet weak var lwButton: CircleMenu!
     @IBOutlet weak var rwButton: CircleMenu!
@@ -20,20 +21,105 @@ class MainViewController: UIViewController, CircleMenuDelegate, UITableViewDataS
     @IBOutlet weak var statTableView: UITableView!
     @IBOutlet weak var playerTableView: UITableView!
     
+    @IBOutlet weak var horizontalDragPicker: DragMenuPicker!
+    
+    @IBOutlet weak var rwDragPicker: DragMenuPicker!
+    @IBOutlet weak var lwDragPicker: DragMenuPicker!
+    @IBOutlet weak var ldDragPicker: DragMenuPicker!
+    @IBOutlet weak var rdDragPicker: DragMenuPicker!
+    
+    var tableCurrName = 0
+    var tableCurrStat = 0
+    var statTrue = true
+    
     @IBOutlet weak var timeButton: UIButton!
     var time = 1200
     var timer = Timer()
     var isTiming = false
     
+    var shotCounter = 0 {
+        didSet {
+            shotsAgainst.text = "Shots: " + String(shotCounter)
+            let y = Double(round(1000*Double(shotCounter-away)/Double(shotCounter))/1000)
+            savePercentage.text = "Save%: " + String(y)
+        }
+    }
+    @IBOutlet weak var shotsAgainst: UILabel!
+    @IBOutlet weak var savePercentage: UILabel!
+    @IBOutlet weak var shotsFor: UILabel!
+    @IBOutlet weak var savePercentageAgainst: UILabel!
+    
     var home = 0
-    var away = 0
+    var away = 0 {
+        didSet {
+            savePercentage.text = "Save%: " + String(Double(shotCounter-away)/Double(shotCounter))
+        }
+    }
+    
+    var period = 1 {
+        didSet {
+            periodButton.setTitle("Period: " + String(period), for: .normal)
+        }
+    }
+    @IBOutlet weak var periodButton: UIButton!
+    var canChangePeriod = false
     
     private var statData = ["Shot", "Hit", "Block", "Turnover", "Take Away"]
     private var playerData = ["Magic", "Caleb", "Karl", "Jack", "Drew", "Kevin", "Alex"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        //horizontalDragPicker?.title = "Center"
+        horizontalDragPicker?.items = ["Risley", "Polak", "Gauvin", "Rankin"]
+        horizontalDragPicker?.direction = .vertical
+        horizontalDragPicker?.margins = 20
+        horizontalDragPicker?.itemLabel.textAlignment = .center
+        horizontalDragPicker?.menuDelegate = self
+        horizontalDragPicker?.didSelectItem = { item, index in
+            print("\(item) selected at index \(index)")
+        }
+        lwDragPicker?.items = ["Markwordt", "Leon", "Lublin", "Burg"]
+        lwDragPicker?.direction = .horizontal
+        lwDragPicker?.margins = 20
+        lwDragPicker?.itemLabel.textAlignment = .center
+        lwDragPicker?.menuDelegate = self
+        lwDragPicker?.didSelectItem = { item, index in
+            print("\(item) selected at index \(index)")
+        }
+        rwDragPicker?.items = ["Broz", "Collins", "Holt", "Petrick"]
+        rwDragPicker?.direction = .horizontal
+        rwDragPicker?.margins = 20
+        rwDragPicker?.itemLabel.textAlignment = .center
+        rwDragPicker?.menuDelegate = self
+        rwDragPicker?.didSelectItem = { item, index in
+            print("\(item) selected at index \(index)")
+        }
+        ldDragPicker?.items = ["Magic", "Newbie", "Wallace"]
+        ldDragPicker?.direction = .horizontal
+        ldDragPicker?.margins = 20
+        ldDragPicker?.itemLabel.textAlignment = .center
+        ldDragPicker?.menuDelegate = self
+        ldDragPicker?.didSelectItem = { item, index in
+            print("\(item) selected at index \(index)")
+        }
+        rdDragPicker?.items = ["Jones", "Cael", "Chen"]
+        rdDragPicker?.direction = .horizontal
+        rdDragPicker?.margins = 20
+        rdDragPicker?.itemLabel.textAlignment = .center
+        rdDragPicker?.menuDelegate = self
+        rdDragPicker?.didSelectItem = { item, index in
+            print("\(item) selected at index \(index)")
+        }
+        
+        //let tap = UITapGestureRecognizer(target: self.lwDragPicker, action: #selector(self.handleTap(_:)))
+        
+        //lwDragPicker.addGestureRecognizer(tap)
+        
+        //view.isUserInteractionEnabled = true
+        
+        //self.view.addSubview(view)
+        
         // Do any additional setup after loading the view.
         
         centerButton.buttonsCount = 4
@@ -81,9 +167,18 @@ class MainViewController: UIViewController, CircleMenuDelegate, UITableViewDataS
     }
     
     @objc func counter(){
-        time -= 1
-        let reportTime =  String(time/60) + ":" + String(time%60)
-        timeButton.setTitle(String(reportTime), for: .normal)
+        if time == 0 {
+            isTiming = false
+            timer.invalidate()
+            canChangePeriod = true
+        } else {
+            time -= 1
+            let minutes = time/60
+            let seconds = time%60
+            let reportTime =  String(format:"%02i:%02i", minutes, seconds)
+            
+            timeButton.setTitle(String(reportTime), for: .normal)
+        }
     }
     
     @IBAction func homeScore(_ sender: UIButton) {
@@ -95,6 +190,27 @@ class MainViewController: UIViewController, CircleMenuDelegate, UITableViewDataS
         away += 1
         sender.setTitle(String(away), for: .normal)
     }
+    
+    @IBAction func changePeriod(_ sender: UIButton) {
+        if period == 3 {
+            periodButton.setTitle("End Game", for: .normal)
+        } else if canChangePeriod {
+            time = 1200
+            let minutes = time/60
+            let seconds = time%60
+            let reportTime =  String(format:"%02i:%02i", minutes, seconds)
+            
+            timeButton.setTitle(String(reportTime), for: .normal)
+            
+            period += 1
+            canChangePeriod = false
+        }
+    }
+    
+    @IBAction func shotAt(_ sender: UIButton) {
+        shotCounter += 1
+    }
+    
     
     @IBAction func leftWingButtonPressed(_ sender: Any) {
         print("Left wing button pressed")
@@ -130,6 +246,7 @@ class MainViewController: UIViewController, CircleMenuDelegate, UITableViewDataS
         goalieButton.alpha = 1
     }
     
+    
     func circleMenu(_ circleMenu: CircleMenu, willDisplay button: UIButton, atIndex: Int) {
         centerButton.alpha = 0
         lwButton.alpha = 0
@@ -158,13 +275,28 @@ class MainViewController: UIViewController, CircleMenuDelegate, UITableViewDataS
             cell = tableView.dequeueReusableCell(withIdentifier: "statCell")
             let text = statData[indexPath.row]
             cell?.textLabel?.text = text
+            tableCurrStat = indexPath.row
         }
         if tableView == self.playerTableView {
             cell = tableView.dequeueReusableCell(withIdentifier: "playerListCell")
             let text = playerData[indexPath.row]
             cell?.textLabel?.text = text
+            tableCurrName = indexPath.row
         }
         return cell!
+    }
+    
+    /*
+    func dragMenuViewWillDisplayMenu(_ dragMenuView: DragMenuView) {
+        scrollView?.panGestureRecognizer.isEnabled = false
+    }
+    
+    func dragMenuViewDidDisplayMenu(_ dragMenuView: DragMenuView) {
+        scrollView?.panGestureRecognizer.isEnabled = true
+    }*/
+    
+    func dragMenuView(_ dragMenuView: DragMenuView, didSelect item: String, at index: Int) {
+        print("(from delegate) \(item) selected at index \(index)")
     }
     
 }

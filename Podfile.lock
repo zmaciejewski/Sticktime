@@ -1,5 +1,6 @@
 PODS:
   - CircleMenu (3.1.0)
+  - DragMenuPicker (0.0.1)
   - Firebase/Auth (5.4.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.2)
@@ -39,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - CircleMenu
+  - DragMenuPicker
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -46,6 +48,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CircleMenu
+    - DragMenuPicker
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -59,6 +62,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CircleMenu: 68e85ad9ea8e22aa5cb00b204abb176c5edec587
+  DragMenuPicker: 5ec9ac9b1ee8c897eca361f91eb81f4366befbd6
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
@@ -70,6 +74,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: e8c79d3b1bada7be7c8e22bcb6f94f91382668cd
+PODFILE CHECKSUM: a847ff031ca7a47955a581a9f318826319734309
 
 COCOAPODS: 1.5.3

@@ -18,6 +18,7 @@ target 'Sticktime' do
   #pod 'UIColor-CrossFade'
   #pod 'PureLayout'
 
+  pod 'DragMenuPicker'
 
   target 'SticktimeTests' do
     inherit! :search_paths
